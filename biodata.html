@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <header class="header">
+        <h1>Biodata</h1>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>    
+            <li><a href="biodata.html">Biodata</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="hobi.html">Hobi</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="biodata">
+            <img src="foto.jpg" alt="Foto Profil">
+            <h2>Nama: Muhammad Akbar Kurniawan</h2>
+            <h3>NIM: 20220140155</h3>
+            <h3>Kelas: D</h3>
+            <h3>Alamat: Bantul</h3>
+            <h3>Jenis Kelamin: Laki-laki</h3>
+            <h3>Umur: 20th</h3>
+            <h3>Bahasa Pemrograman: HTML/CSS</h3>
+    </div>
+    
+
+    <div class="content">
+        <h1>Edit Biodata</h1>
+        <form action="submit_form.php" method="post" class="form" id="biodata-form">
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" required><br><br>
+            
+            <label for="alamat">Alamat:</label><br>
+            <textarea id="alamat" name="alamat" rows="4" cols="50" required></textarea><br><br>
+            
+            <label for="jenis_kelamin">Jenis Kelamin:</label><br>
+            <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki" required>
+            <label for="laki_laki">Laki-laki</label>
+            <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+            <label for="perempuan">Perempuan</label><br><br>
+            
+            <label for="umur">Umur:</label><br>
+            <input type="number" id="umur" name="umur" required><br><br>
+            
+            <label for="bahasa_pemrograman">Bahasa Pemrograman yang dikuasai:</label><br>
+            <input type="checkbox" id="html_css" name="bahasa_pemrograman[]" value="HTML/CSS">
+            <label for="html_css">HTML/CSS</label><br>
+            <input type="checkbox" id="javascript" name="bahasa_pemrograman[]" value="JavaScript">
+            <label for="javascript">JavaScript</label><br>
+            <input type="checkbox" id="python" name="bahasa_pemrograman[]" value="Python">
+            <label for="python">Python</label><br>
+            <input type="checkbox" id="java" name="bahasa_pemrograman[]" value="Java">
+            <label for="java">Java</label><br>
+            <input type="checkbox" id="cpp" name="bahasa_pemrograman[]" value="C++">
+            <label for="cpp">C++</label><br>
+            <input type="checkbox" id="php" name="bahasa_pemrograman[]" value="PHP">
+            <label for="php">PHP</label><br><br>
+            
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Website. Muhammad Akbar Kurniawan.</p>
+    </footer>
+
+    <script>
+        document.getElementById("biodata-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Menampilkan pesan sebagai popup
+            alert("Data berhasil diinput");
+        });
+    </script>
+</body>
+</html>
